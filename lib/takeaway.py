@@ -7,7 +7,7 @@ class Takeaway: #Main class
         #   None
         # Self instance variable:
         #   self.all_customer_orders = [] #list that stores all customer_orders
-        #   for e.g. [{customer1 : [{"dish name" : "burger", "price" : 5.80, "quantity": 1}, {"dish name" : "fries", "price" : 1.80, "quantity": 1}]
+        #   for e.g. {customer1 : [{"dish name" : "burger", "price" : 5.80, "quantity": 1}, {"dish name" : "fries", "price" : 1.80, "quantity": 1}]
         pass # No code here yet
 
     def get_menu(self):
@@ -42,8 +42,9 @@ class Takeaway: #Main class
         #   None
         # Returns:
         #   String with message "Thank you! Your order was placed and will be delivered before 18:52" 
+        pass # No code here yet
 
-    def generate_timestamp_sms_message(self):
+    def send_sms_message(self):
         # Parameters:
         #   None
         # Returns:
