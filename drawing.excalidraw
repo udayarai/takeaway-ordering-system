@@ -1,0 +1,317 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "EQvqW072jeaOPPqfrIpuT",
+      "type": "text",
+      "x": 973.06640625,
+      "y": 150.76171875,
+      "width": 378.4797668457031,
+      "height": 600,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a0",
+      "roundness": null,
+      "seed": 1479714681,
+      "version": 686,
+      "versionNonce": 1398237522,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1760697350017,
+      "link": null,
+      "locked": false,
+      "text": "noun\n- customer\n- dish / meal\n- price\n- order\n- receipt\n- time\n- **Takeaway**\n- **menu**\n\n\nverbs\n- want to order something\n    - see list of dishes with prices\n- order the meal\n    - select available meals/dishes\n- verify order is correct\n    - see an itemised receipt with total\n- order delivered on time\n    - receive text message\n\n\n\n",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "noun\n- customer\n- dish / meal\n- price\n- order\n- receipt\n- time\n- **Takeaway**\n- **menu**\n\n\nverbs\n- want to order something\n    - see list of dishes with prices\n- order the meal\n    - select available meals/dishes\n- verify order is correct\n    - see an itemised receipt with total\n- order delivered on time\n    - receive text message\n\n\n\n",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "4IFI8aP0uZEOXICctY_EC",
+      "type": "rectangle",
+      "x": 162.8984375,
+      "y": 155.74218749999997,
+      "width": 770.99609375,
+      "height": 329.85937500000006,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a2",
+      "roundness": {
+        "type": 3
+      },
+      "seed": 563975577,
+      "version": 532,
+      "versionNonce": 1743957330,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "k4nZ2XC6cG1HWqDbeUAKP",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1760697257900,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "fRIO4KOBETcMsZRYQJDIa",
+      "type": "text",
+      "x": 202.3983465504682,
+      "y": 169.57421875,
+      "width": 585.1694946289062,
+      "height": 336.7431640624998,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a3",
+      "roundness": null,
+      "seed": 992506041,
+      "version": 851,
+      "versionNonce": 1320740558,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "2G9TsfOzj1LrKQu5D_WjV",
+          "type": "arrow"
+        },
+        {
+          "id": "k4nZ2XC6cG1HWqDbeUAKP",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1760697325805,
+      "link": null,
+      "locked": false,
+      "text": "Takeaway (Main class)\nself.all_customers_orders = {} (instance var)\nfor e.g. {}\n\ndef add_customer_order(self, customer_instance)\n    e.g. {cust_name : [{\"dish name\":\"burger\", \"price\": 4, \"qty\": 1}, ...]}\n\ndef get_menu(self)\n\ndef verify_order(self)\n\ndef generate_timestamp_sms_message(self)\n\ndef send_sms_message(self)\n    ",
+      "fontSize": 17.959635416666654,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Takeaway (Main class)\nself.all_customers_orders = {} (instance var)\nfor e.g. {}\n\ndef add_customer_order(self, customer_instance)\n    e.g. {cust_name : [{\"dish name\":\"burger\", \"price\": 4, \"qty\": 1}, ...]}\n\ndef get_menu(self)\n\ndef verify_order(self)\n\ndef generate_timestamp_sms_message(self)\n\ndef send_sms_message(self)\n    ",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "ay-QWOG_a7phWsCLJIFxq",
+      "type": "rectangle",
+      "x": 151.1484375000001,
+      "y": 526.9296874999999,
+      "width": 762.3476562499999,
+      "height": 200.52343750000003,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a4",
+      "roundness": {
+        "type": 3
+      },
+      "seed": 1905032503,
+      "version": 1254,
+      "versionNonce": 137745102,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "k4nZ2XC6cG1HWqDbeUAKP",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1760697330788,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "RRlQdiRMMpjQwnj08kLjJ",
+      "type": "text",
+      "x": 192.90234375,
+      "y": 545.96484375,
+      "width": 700.0440673828125,
+      "height": 242.28417304174803,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a8",
+      "roundness": null,
+      "seed": 19317401,
+      "version": 1066,
+      "versionNonce": 408228370,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "2G9TsfOzj1LrKQu5D_WjV",
+          "type": "arrow"
+        },
+        {
+          "id": "k4nZ2XC6cG1HWqDbeUAKP",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1760697336471,
+      "link": null,
+      "locked": false,
+      "text": "Customer (Helper class)\ndef __init__(self, name, address, phone)\nself.customer_selected_dishes = []\ndef view_menu(self) [{\"dish name\": dish, \"price\":4}]\ndef add_dish(self, dish, qty) [{\"dish name\":\"burger\", \"price\": 4, \"qty\": 1}, ...]\ndef remove_dish(self, dish, qty)\n\n\n\n    ",
+      "fontSize": 19.382733843339842,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Customer (Helper class)\ndef __init__(self, name, address, phone)\nself.customer_selected_dishes = []\ndef view_menu(self) [{\"dish name\": dish, \"price\":4}]\ndef add_dish(self, dish, qty) [{\"dish name\":\"burger\", \"price\": 4, \"qty\": 1}, ...]\ndef remove_dish(self, dish, qty)\n\n\n\n    ",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "k4nZ2XC6cG1HWqDbeUAKP",
+      "type": "arrow",
+      "x": 587.8255310058594,
+      "y": 522.621826171875,
+      "width": 0.3745576904406107,
+      "height": 27.185084635356304,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "aC",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1079452050,
+      "version": 337,
+      "versionNonce": 917025618,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1760697337444,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0.3745576904406107,
+          -27.185084635356304
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "RRlQdiRMMpjQwnj08kLjJ",
+        "focus": 0.12201168831809238,
+        "gap": 23.343017578125
+      },
+      "endBinding": {
+        "elementId": "ay-QWOG_a7phWsCLJIFxq",
+        "focus": 0,
+        "gap": 31.49294596348119
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false
+    },
+    {
+      "id": "2G9TsfOzj1LrKQu5D_WjV",
+      "type": "arrow",
+      "x": 701.639567295262,
+      "y": 489.88428458334147,
+      "width": 1.0726824605974343,
+      "height": 37.99022713540853,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "aE",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 113880398,
+      "version": 193,
+      "versionNonce": 228804686,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1760697349940,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1.0726824605974343,
+          37.99022713540853
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": {
+        "elementId": "RRlQdiRMMpjQwnj08kLjJ",
+        "focus": 0.4632130284640857,
+        "gap": 18.09033203125
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
