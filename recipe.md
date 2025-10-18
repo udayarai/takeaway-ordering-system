@@ -92,33 +92,31 @@ class Customer:
     #   address: string
     #   phone: string
 
-    def __init__(self, name, address, phone):
+    def __init__(self, name, address, phone, takeaway):
         # Parameters:
         # name: string
         # address: string
         # phone: string
+        # takeaway: object instance of takeaway class
         # Side-effects:
         #   Sets the name, address and phone of the customer
         #self.name = name
         #self.address = address
         #self.phone = phone
+        #self.takeaway = takeaway
         #
         # Class instance variable
         #   self.customer_selected_dishes = []  #list to store customer selected dishes
         #   for e.g. [{"dish name":"burger", "price": 4, "qty": 1}, ...]
         pass # No code here yet
 
-
-    def view_menu(self, takeaway):
+    def view_menu(self):
         #Parameters:
-        #   takeaway : an instance of object Takeaway
-        #Returns
-        #   returns a string of food names and prices
-        #   "burger", "price" : 5.80
-        #   "fries", "price" : 1.80
-        pass # No code here yet
+        #   None
+        #Returns menu in string format
+        #   for e.g. halloumi fries, price: 7 etc
 
-    def add_dish(self, dish, quantity):
+    def add_dish(self, dish, quantity=1):
         #Parameters:
         #   dish: string representing name of dish for e.g. burger
         #   quantity: integer representing quantity of dish e.g. 1, 2, 3, etc
