@@ -1,6 +1,8 @@
 # Takeaway class Integration tests
 from lib.customer import *
 from lib.takeaway import *
+from unittest.mock import Mock
+from datetime import datetime
 import pytest
 
 
@@ -44,13 +46,34 @@ where customer has selected the dishes
 add_customer_order has added the customer order to self.all_customer_orders
 generate_timestamp_sms_message() generates sms message
 """
-@pytest.mark.skip(reason="not ready yet")
+#@pytest.mark.skip(reason="not ready yet")
 def test_generates_sms_message_with_timestamp():
     takeaway = Takeaway()
     customer = Customer("John Mayer", "71 Mayfair Street", "123456789101", takeaway)
-    customer.add_dish("Burger", 1)
-    customer.add_dish("Fries", 1)
+    
+    order_time = datetime.now()
+    delivery_time = order_time.replace(hour = order_time.hour + 1)
 
     takeaway.add_customer_order(customer)
-    takeaway.generate_timestamp_sms_message()
-    assert takeaway.generate_timestamp_sms_message() == "Thank you! Your order was placed and will be delivered before 18:52" 
+    assert takeaway.generate_timestamp_sms_message() == f"Thank you! Your order was placed and will be delivered before {delivery_time.strftime('%H:%M')}"
+
+
+"""
+given a customer instance
+where customer has selected the dishes
+add_customer_order has added the customer order to self.all_customer_orders
+generate_timestamp_sms_message() has generated a sms message
+send_sms_messages() sends sms_message given a correct phone number
+"""
+@pytest.mark.skip(reason="passed but manually skipped to stop running out of trial credit")
+def test_send_sms_message_sends_sms_message():
+    takeaway = Takeaway()
+    customer = Customer("John Mayer", "71 Mayfair Street", "447828906673", takeaway)
+    
+    customer.add_dish("burger", 1)
+    customer.add_dish("fries", 1)
+    takeaway.add_customer_order(customer)
+    takeaway.verify_order(customer)
+    sms_message = takeaway.generate_timestamp_sms_message()
+    assert takeaway.send_sms_message(sms_message, customer) == "Message sent successfully."
+    

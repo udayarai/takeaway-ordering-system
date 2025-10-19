@@ -1,57 +1,79 @@
-# Takeaway class unit tests
-# from lib.customer import *
-# from lib.takeaway import *
-# from unittest.mock import Mock
+from lib.customer import *
+from lib.takeaway import *
+from unittest.mock import Mock
 
-# """
-# given a customer instance
-# where customer has selected multiple dishes
-# add_customer_order adds all customer order to self.all_customer_orders
-# """
-# def test_add_customer_order_adds_all_customer_order():
-#     customer = Mock()
-#     customer.name = "John Mayer"
-#     customer.address =  "71 Mayfair Street"
-#     customer.phone = "123456789101"
-#     customer.customer_selected_dishes.return_value = [{"dish name" : "burger", "price" : 5.80, "quantity": 1}, {"dish name" : "fries", "price" : 1.80, "quantity": 1}]
+"""
+given a customer instance
+where customer has selected multiple dishes
+add_customer_order adds all customer order to self.all_customer_orders
+"""
+def test_add_customer_order_adds_all_customer_order():
+    customer = Mock()
+    customer.name = "John Mayer"
+    customer.address =  "71 Mayfair Street"
+    customer.phone = "123456789101"
+    customer.customer_selected_dishes = [{"dish name" : "burger", "price" : 5.80, "quantity": 1}, {"dish name" : "fries", "price" : 1.80, "quantity": 1}]
 
-#     takeaway = Takeaway()
-#     takeaway.add_customer_order(customer)
-#     assert takeaway.all_customer_orders == {"John Mayer" : [{"dish name" : "burger", "price" : 5.80, "quantity": 1}, {"dish name" : "fries", "price" : 1.80, "quantity": 1}]}
-
-
-# """
-# verify_order() shows the itemised receipt
-# """
-# def test_verify_order_shows_the_itemised_receipt():
-#     customer = Customer("John Mayer", "71 Mayfair Street", "123456789101")
-#     customer.add_dish("Burger", 1)
-#     customer.add_dish("Fries", 1)
-
-#     takeaway = Takeaway()
-#     takeaway.add_customer_order(customer)
-#     assert takeaway.verify_order() == "Food     Qty     Price\nBurger     1     1.50\nFries    1     1.80\nTotal     7.60"
+    takeaway = Takeaway()
+    takeaway.add_customer_order(customer)
+    assert takeaway.all_customer_orders == {"John Mayer" : [{"dish name" : "burger", "price" : 5.80, "quantity": 1}, {"dish name" : "fries", "price" : 1.80, "quantity": 1}]}
 
 
+"""
+verify_order() shows the itemised receipt
+"""
+def test_verify_order_shows_the_itemised_receipt():
+    customer = Mock
+    customer.name = "John Mayer"
+    customer.address =  "71 Mayfair Street"
+    customer.phone = "123456789101"
+    
+    customer.customer_selected_dishes = [{"dish name" : "burger", "price" : 5.80, "quantity": 1}, {"dish name" : "fries", "price" : 1.80, "quantity": 1}]
 
-# """
-# given a customer instance
-# where customer has selected the dishes
-# add_customer_order has added the customer order to self.all_customer_orders
-# generate_timestamp_sms_message() generates sms message
-# """
-# def test_generate_timestamp_sms_message_generatates_sms_message():
-#     customer = Mock()
-#     customer.name = "John Mayer"
-#     customer.address =  "71 Mayfair Street"
-#     customer.phone = "123456789101"
+    takeaway = Takeaway()
+    takeaway.add_customer_order(customer)
+    assert takeaway.verify_order(customer) == "Food\tQty\tPrice\nburger\t1\t5.80\nfries\t1\t1.80\nTotal\t\t7.60"
 
-#     customer.add_dish("Burger", 1)
-#     customer.add_dish("Fries", 1)
 
-#     takeaway = Takeaway()
-#     takeaway.add_customer_order(customer)
-#     takeaway.generate_timestamp_sms_message() #=> "Thank you! Your order was placed and will be delivered before 18:52" #18:52 is an example only 
+
+"""
+given a customer instance
+where customer has selected the dishes
+add_customer_order has added the customer order to self.all_customer_orders
+generate_timestamp_sms_message() generates sms message
+"""
+from unittest.mock import Mock
+from lib.takeaway import Takeaway
+
+def test_generate_timestamp_sms_message_generatates_sms_message():
+    # Mock the Vonage client class and its instance
+    mock_client_class = Mock()
+    mock_vonage_instance = Mock()
+    mock_sms = Mock()
+    mock_response = Mock()
+
+    # Setup the response from sms.send()
+    mock_response.model_dump.return_value = {
+        "messages": [{"status": "0"}]
+    }
+    mock_sms.send.return_value = mock_response
+
+    # Link mocks together
+    mock_vonage_instance.sms = mock_sms
+    mock_client_class.return_value = mock_vonage_instance
+
+    # Create customer mock
+    customer = Mock()
+    customer.phone = "07828906675"
+
+    # Create instance of Takeaway
+    takeaway = Takeaway()
+
+    # Call send_sms_message with mocked Vonage client class
+    result = takeaway.send_sms_message("your message has been delivered", customer, mock_client_class)
+
+    # Assert success message
+    assert result == "Message sent successfully."
 
 
 
